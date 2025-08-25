@@ -269,6 +269,8 @@ def main():
             date_input = st.date_input(
                 "Observation Date",
                 value=datetime(2014, 3, 29),
+                min_value=datetime(2010, 5, 1),  # SDO/HMI started in 2010
+                max_value=datetime.now(),  # Allow up to current date
                 help="Select the observation date"
             )
         
