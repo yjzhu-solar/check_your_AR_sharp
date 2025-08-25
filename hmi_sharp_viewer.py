@@ -8,8 +8,6 @@ import streamlit as st
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import numpy as np
-import sunpy
-import sunpy.map
 from sunpy.time import parse_time
 from astropy.io import fits
 import astropy.units as u
