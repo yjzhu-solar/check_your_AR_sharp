@@ -1,0 +1,23 @@
+streamlit
+plotly
+
+# Solar physics packages
+sunpy
+drms
+
+# Scientific computing
+numpy
+pandas
+astropy
+
+# Additional dependencies that may be needed by sunpy
+matplotlib
+scipy
+scikit-image
+beautifulsoup4
+zeep
+tqdm
+parfive
+
+# For FITS file handling
+fitsio
