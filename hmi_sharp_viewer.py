@@ -490,7 +490,7 @@ def main():
                     "Total Field Strength |B|", "Continuum Intensity",
                     colorscale1='Viridis', colorscale2='gray',
                     zmin1=0, zmax1=np.nanmax(b_total),
-                    colorbar_title1="Angle [°]", colorbar_title2="Intensity"
+                    colorbar_title1="|B| [G]", colorbar_title2="Intensity"
                 )
                 
                 st.plotly_chart(fig, use_container_width=True)
