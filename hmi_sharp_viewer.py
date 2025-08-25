@@ -535,7 +535,8 @@ def main():
                         title="Vertical Field Distribution",
                         xaxis_title="Bz [G]",
                         yaxis_title="Count",
-                        height=400
+                        height=400,
+                        yaxis_type="log"
                     )
                     st.plotly_chart(fig_hist, use_container_width=True)
                 
