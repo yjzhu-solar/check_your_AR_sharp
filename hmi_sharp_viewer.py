@@ -484,28 +484,16 @@ def main():
                 st.subheader("Total Magnetic Field Strength")
                 
                 b_total = np.sqrt(bx_new**2 + by_new**2 + bz_new**2)
+
+                fig = create_interactive_plot(
+                    b_total, ic_new,
+                    "Total Field Strength |B|", "Continuum Intensity",
+                    colorscale1='Viridis', colorscale2='gray',
+                    zmin1=0, zmax1=np.nanmax(b_total),
+                    colorbar_title1="Angle [°]", colorbar_title2="Intensity"
+                )
                 
-                col1, col2 = st.columns(2)
-                
-                with col1:
-                    fig1 = create_single_plot(
-                        b_total,
-                        "Total Field Strength |B|",
-                        colorscale='Viridis',
-                        zmin=0,
-                        zmax=np.nanmax(b_total),
-                        colorbar_title="|B| [G]"
-                    )
-                    st.plotly_chart(fig1, use_container_width=True)
-                
-                with col2:
-                    fig2 = create_single_plot(
-                        ic_new,
-                        "Continuum Intensity",
-                        colorscale='gray',
-                        colorbar_title="Intensity"
-                    )
-                    st.plotly_chart(fig2, use_container_width=True)
+                st.plotly_chart(fig, use_container_width=True)
             
             # Statistics
             st.header("📊 Field Statistics")
